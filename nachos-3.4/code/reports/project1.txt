@@ -1,0 +1,25 @@
+Group 2: Sean Palmer, 5313843 ; Nicolas Gonzalez, 3841069 ; Luis Carrillo, 5917073
+
+Exercise 1:
+When running the modified SimpleThreads() without any synchronization code, each thread runs and counts through the values 0 to 4 individually.
+The final number they each see is 5.  
+The access to SharedVariable is not gated, so each thread running SimpleThread() is modifying it with it's local val instead of one
+that is set and updated the intended way as if it was synchronized.
+
+The value that is passed to ThreadTest() must be changed manually.
+
+The synchronized code counts properly between the threads and waits for each to be done before it prints the final value, when ./nachos is run 
+with and without the -rs switch enabled.
+
+Exercise 2:
+Code counts properly between the threads and waits for each to be done before it prints the final value, when ./nachos is run 
+with and without the -rs switch enabled.
+
+Exercise 3: 
+Tested Ping.cc and verified that ping and pong alternate properly when using Conditions.
+
+Exercise 4:
+The code prints out the correct output for persons queuing for, entering, and exiting the elevator.
+The elevator outputs the floor it arrives at.  It picks up persons as it travels up and down, collecting up to 5 at a time.
+Verified that the code works when -rs switch is enabled.
+The elevator thread stops running when there are no more passengers on the elevator, or it has reached the top floor (equivalent to it having passed each floor at least once.)

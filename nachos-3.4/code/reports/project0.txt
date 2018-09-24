@@ -1,0 +1,13 @@
+Group 2: Sean Palmer, 5313843 ; Nicolas Gonzalez, 3841069 ; Luis Carrillo, 5917073
+
+All groups members were able to install NACHOS without any major technical issues using materials provided by the class.  
+Any delays experienced in upacking or building NACHOS were related to needing to refresh on UNIX commands, for example checking for make and gcc and the LD_LIBRARY_PATH.
+
+All groups members were able to run the threads demo and received the output that was described in the assignment document.
+The halt program was also successfully run.  The program calls a function which prints a message that the machine is halting, prints stats, and then runs a cleanup.
+The -s switch is what turns on single step mode when running a program.  As described in the roadmap it provides the ability to check the registers and memory as a program runs line by line.
+
+In NACHOS, threads execute and share NACHOS source code and the same global variables.  They execute concurrently and must worry about synchronization when accessing shared memory.
+Unlike other systems, NACHOS does not keep a process table but instead there are pointers that lead to different thread instances throughout memory.
+The Thread class provides the ability to initialize, create (Fork), and allocate memory for new threads (StackAllocate).  
+It also provides the ability to pause a thread so another one may run (Yield), pause a thread until a future event that needs it (Sleep), and sleep the thread until terminated by another thread (Finish).
